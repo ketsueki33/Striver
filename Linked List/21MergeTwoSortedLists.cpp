@@ -5,6 +5,7 @@ using namespace std;
     cin.tie(NULL);
 
 // https://leetcode.com/problems/merge-two-sorted-lists/
+// https://youtu.be/Lhu3MsXZy-Q
 
 struct ListNode {
     int val;
