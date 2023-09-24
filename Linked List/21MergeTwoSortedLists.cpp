@@ -35,7 +35,7 @@ class Solution {
             }
             temp->next = l2;  // we break the chain in l1 and connect to l2
             swap(l1, l2);     // we swap again to make l1->val smaller than l2->val
-            // if l1 had become null, l2 will now be l1 and the new l1 will be added to our answer
+            // if l1 becomes null, temp would be connected to the rest of l2 and the loop will be exited
         }
         return head;
     }
