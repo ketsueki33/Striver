@@ -4,11 +4,12 @@ using namespace std;
     ios_base::sync_with_stdio(false); \
     cin.tie(NULL);
 
-//https://leetcode.com/problems/set-matrix-zeroes/description/
+// https://leetcode.com/problems/set-matrix-zeroes/description/
+// https://youtu.be/N0MgLvceX7M
 class Solution {
    public:
     void setZeroes(vector<vector<int>>& matrix) {
-        // we mark the rows and columns for setting 0s in the first column and row itself
+        // we mark the rows and columns for setting 0s in the first column and the first row itself
         // the [0][0] spot is in both, so we use one extra variable for the row marker
         int ext = 1;
         int n = matrix.size();
