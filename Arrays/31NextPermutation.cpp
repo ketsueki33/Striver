@@ -23,7 +23,7 @@ class Solution {
             return;
         }
 
-        // replace nums[i] with the smallest greater than than nums[i] that is after i
+        // replace nums[i] with the smallest element greater than than nums[i] that lies after 'i'
         for (int k = nums.size() - 1; k > i; k--) {
             if (nums[k] > nums[i]) {
                 swap(nums[k], nums[i]);
