@@ -7,6 +7,10 @@ using namespace std;
 // https://www.codingninjas.com/studio/problems/find-minimum-number-of-coins_975277
 // https://www.youtube.com/watch?v=mVg9CfJvayM
 
+// NOTE:- This algorithm works only when the available coin denominations follow this conditon:
+// 								x,y,z are three coints such that x < y < z
+// 								x + y < z, always
+
 vector<int> MinimumCoins(int val) {
     // Define the denominations of coins available in ascending order.
     int deno[] = {1, 2, 5, 10, 20, 50, 100, 500, 1000};
