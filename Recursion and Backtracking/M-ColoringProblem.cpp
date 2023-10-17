@@ -11,6 +11,7 @@ class Solution {
    public:
     // Function to check if it's valid to color a node with a certain color
     bool isValid(bool graph[101][101], vector<int> colors, int node, int n, int color) {
+        // the move is valid only if none of adjacent nodes have the same color
         for (int k = 0; k < n; k++) {
             if (k != node && graph[k][node] && colors[k] == color)
                 return false;
