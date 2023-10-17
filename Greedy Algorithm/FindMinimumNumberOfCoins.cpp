@@ -8,7 +8,7 @@ using namespace std;
 // https://www.youtube.com/watch?v=mVg9CfJvayM
 
 // NOTE:- This algorithm works only when the available coin denominations follow this conditon:
-// 								x,y,z are three coints such that x < y < z
+// 								x,y,z are three coins such that x < y < z
 // 								x + y < z, always
 
 vector<int> MinimumCoins(int val) {
