@@ -5,6 +5,7 @@ using namespace std;
     cin.tie(NULL);
 
 // https://leetcode.com/problems/rotate-list/
+// https://youtu.be/9VPm6nEbVPA
 
 struct ListNode {
     int val;
@@ -34,7 +35,7 @@ class Solution {
         // we attach the tail to the head to make it a circular linked list
         curr->next = head;
 
-        // we need to move n-k nodes the tail
+        // we need to move n-k nodes from the tail to reach the breakpoint
         k = n - k;
         while (k--) {
             curr = curr->next;
