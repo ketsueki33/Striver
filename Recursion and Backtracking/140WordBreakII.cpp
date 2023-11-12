@@ -9,7 +9,7 @@ using namespace std;
 
 class Solution {
    public:
-    // recursive function to make word breaks and add sentecnes to the result list
+    // recursive function to make word breaks and add sentences to the result list
     void findBreaks(vector<string> &res, string s, string currWord, string currSent, int index, unordered_set<string> dict) {
         // if we have checked the whole sentence, return.
         if (index == s.size()) {
