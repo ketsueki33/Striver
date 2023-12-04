@@ -34,6 +34,9 @@ int numLessThanOrEqX(vector<vector<int>> &matrix, int m, int n, int x) {
 }
 
 // Function to find the median value in a matrix
+
+// The logic is that the median element will always have more than half of the elements that are less than or equal to it.
+// So we perform a binary to search the first element that satisfies this condition.
 int median(vector<vector<int>> &matrix, int m, int n) {
     // Initialize high and low to find the range of possible medians
     int high = INT_MIN, low = INT_MAX;
