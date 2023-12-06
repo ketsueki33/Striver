@@ -21,6 +21,8 @@ class Solution {
 
         // Define search boundaries for left partition in first array
         int low = 0, high = n1;
+	// For further optimization:
+	// int low = max(0,reqLeft - n2 -1 ), high = min(n1, reqLeft);
 
         // Total number of elements
         int n = n1 + n2;
