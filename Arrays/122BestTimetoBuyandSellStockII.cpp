@@ -12,36 +12,19 @@ class Solution {
     int maxProfit(vector<int>& prices) {
         int n = prices.size();
 
-        // if pocket true, we have bought and are ready to sell. If false, we can buy.
-        bool pocket = false;
+        // res to keep track of accumulated profits
+        int res = 0;
 
-        // cost keeps track of the price of last bought stock
-        int profit = 0, cost;
+        // we will use the fact that we are allowed to sell and buy on the same day
+        // so at every index, we assume that we could have bought the stock of the previous day.
 
-        // We buy at dip ( currElement < nextElement). We sell at peak ( currElement > nextElement)
-        for (int i = 0; i < n - 1; i++) {
-            if (!pocket) {
-                if (prices[i] < prices[i + 1]) {
-                    pocket = true;
-                    cost = prices[i];
-                }
-            } else {
-                if (prices[i] > prices[i + 1]) {
-                    pocket = false;
-                    profit += prices[i] - cost;
-                }
-            }
-        }
+        for (int i = 1; i < n; i++)
+            // if there is a spike, we sell the stock bought on the previous day.
+            if (prices[i] > prices[i - 1])
+                res += (prices[i] - prices[i - 1]);
+        // if there is a dip, swe move to the next day.
 
-        // this is an edge case where we still have a stock left to sell. This will only happen when the 
-        // price was only going down at the end or if we bought the 2nd last stock. In both the cases we
-        // just sell it on the last day as prices[n-1] - cost >= 0
-
-        if (pocket) {
-            profit += prices[n - 1] - cost;
-        }
-
-        return profit;
+        return res;
     }
 };
 
